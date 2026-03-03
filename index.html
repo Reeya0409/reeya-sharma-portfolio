@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reeya Sharma | Portfolio</title>
+        <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        ::selection{
+            background-color:rgb(170, 107, 228) ;
+            color: #232345;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: rgb(0, 0, 33);
+            color: white;
+            overflow-x: hidden;
+            padding-top: 90px;
+        }
+        section {
+            padding: 70px 0;
+        }
+
+        h1 {
+            margin-bottom: 30px;
+        }
+
+        hr {
+            border-color: #9c97f1;
+        }
+        /* **********NAVBAR********** */
+
+        nav {
+            background-color: rgb(16, 18, 62);
+            
+        }
+         .navbar-brand {
+            font-weight: bold;
+        }
+
+        .nav-link {
+            color: white !important;
+        }
+
+        .nav-link:hover {
+            color: rgb(170, 107, 228) !important;
+        }
+
+        .firstSection {
+            margin-top: 40px;
+        }
+        .purple {
+            color: rgb(170, 107, 228);
+        }
+
+        .profileimage{
+            border-radius: 50%;
+            border: 2px rgb(153,153,226) solid;
+            max-width: 320px;
+            width: 100%;
+            height: auto;
+        }
+
+        .leftSection {
+            font-size: 1.4rem;
+        }
+
+        .leftSection .button {
+            padding: 30px 0;
+        }
+
+        .leftSection .button a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .leftSection .btn {
+            padding: 12px;
+            background: #090b4b;
+            color: white;
+            border: 2px solid white;
+            border-radius: 6px;
+            font-size: 15px;
+            cursor: pointer;
+        }
+
+        .rightSection {
+            width: 80%;
+        }
+
+        .textgray {
+            color: gray;
+        }
+
+        #element {
+            color: rgb(170, 107, 228);
+
+        }
+
+        .tech-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 20px;
+            margin-top: 5px;
+        }
+
+        .tech-item {
+            /* background-color: rgb(16, 18, 62); */
+            background-color: rgb(170, 107, 228);
+            color: #111;
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-size: 14px;
+            transition: 0.3s ease;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;  /* horizontal center */
+            align-items: center;      /* vertical center */
+            text-align: center;
+        }
+
+        .tech-item:hover {
+
+            background-color: #FFF;
+            box-shadow: 0 0 20px rgba(155, 100, 206, 0.7);
+            transform: scale(1.1);
+            text-align: center;
+            justify-content: center;
+        }
+
+        main hr {
+            border: 0;
+            background: #9c97f1;
+            height: 1.2px;
+            margin: 40px 80px;
+        }
+
+        .thirdSection {
+            max-width: 80vw;
+            margin: auto;
+        }
+
+        .thirdSection h1 {
+            font-size: 1.9rem;
+        }
+
+        .thirdSection .about {
+            margin: 20px 0;
+            padding: 10px;
+            font-size: 1.2rem;
+            /* font-family: Arial, Helvetica, sans-serif; */
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            line-height: 1.4;
+
+        }
+
+        /*  **********SERVICES********** */
+        .fourthSection {
+            max-width: 80vw;
+            margin: auto;
+            /* height: 80vh; */
+        }
+
+        .fourthSection h1 {
+            font-size: 1.9rem;
+        }
+
+        .fourthSection .services{
+            margin: 20px 0;
+            padding: 10px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 15px;
+           
+        }
+        .fourthSection .services-card{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: rgb(170, 107, 228);
+            border:1px solid rgb(153,153,226);
+            padding: 5px;
+            border-radius: 2%;
+            line-height: 1.4;
+            text-align: center;
+        }
+
+        .fourthSection .services-card:hover{
+            background-color: #FFF;
+            box-shadow: 0 0 60px rgba(155, 100, 206, 1);
+            text-align: center;
+            justify-content: center;
+            color: #232345;
+            }
+
+        .fourthSection .services-card:hover .service-icon{
+            fill: #232345;
+        }
+
+        .fourthSection .services-card h3{
+            line-height: 1.2;
+            margin-bottom: 14px;
+        }
+
+        .fourthSection .service-icon {
+            width: 45px;
+            height: 40px;
+            fill: #ffffff;
+            padding-top: 0;
+            margin-top: 0;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        /*  **********PROJECT**********  */
+        .fifthSection {
+            max-width: 80vw;
+            margin: auto;
+        }
+
+        .fifthSection h1 {
+            font-size: 1.9rem;
+        }
+
+        .fifthSection .project{
+            display: grid;
+            gap: 30px;
+            margin-top: 15px;
+            border: 2px solid #111;
+        }
+         .fifthSection .project-section{
+            font-size: 1rem;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            line-height: 1.5;
+            display: flex;
+            color: #FFF;
+            
+        }
+        .fifthSection .project-card{
+            background-color: rgb(170, 107, 228);
+            justify-content: center;
+            border-radius: 15px;
+            border: 2px solid #111;
+            padding: 25px;
+        }
+
+         .fifthSection .project-card a{
+            text-decoration: none;
+            color: #FFF;
+            
+        }
+
+         .fifthSection .project-image img{
+            width: 100%;
+            height: auto;
+            max-height: 300px;
+            border-radius: 2%;
+            border: 1px solid rgb(153,153,226);
+            transition: transform 0.3s ease;
+        }
+
+        .fifthSection .project-image img:hover{
+            transform: scale(1.05);
+        }
+
+        /*  **********CONTACT ME**********  */
+        .sixthSection {
+            max-width: 80vw;
+            margin: auto;
+            /* height: 80vh; */
+        }
+
+        .sixthSection h1 {
+            font-size: 1.9rem;
+        }
+
+        .sixthSection .contact {
+            border: 2px solid #9c97f1;
+            border-radius: 15px;
+            max-width: 600px;
+            margin: auto;
+            padding: 30px;
+        }
+
+        .sixthSection .contactform {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .sixthSection .contactform span {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .sixthSection .contactform input,
+        .sixthSection .contactform textarea {
+            width: 100%;
+            background-color: rgb(0, 0, 33);
+            border: 1px solid #9c97f1;
+            border-radius: 8px;
+            padding: 10px;
+            color: #9c97f1;
+        }
+
+        .sixthSection .contactform textarea {
+            min-height: 120px;
+            resize: none;
+        }
+    
+        .sixthSection .contactbutton input {
+            width: 100%;
+            background-color: #9c97f1;
+            border: 1px solid rgb(0, 0, 33);
+            padding: 12px;
+            border-radius: 8px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+        .sixthSection .contact .contactbutton input:hover{
+            background-color: rgb(0, 0, 26);
+            border: 1px solid #a29dee;
+            font-size: 1.2rem;
+            color: #a29dee;
+        }
+
+        /*  **********FOOTER**********  */
+        footer {
+            background: #232345;
+        }
+
+        .footer {
+            display: flex;
+            padding: 20px;
+            justify-content: center;
+        }
+
+        .footer ul {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .footer ul li{
+            padding-left: 15px;
+        }
+
+        .footer a{
+            text-decoration: none;
+            color: white;            
+        }
+
+        .footer .div {
+            width: 120px;
+        }
+
+        footer .footer-rights {
+            color: gray;
+            text-align: center;
+            padding: 12px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Reeya's Portfolio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Project</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contactme">Contact Me</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+    <main>
+        <section class="firstSection container">
+            <div class="row align-items-center text-center text-md-start">
+                <div class="col-12 col-md-6 leftSection">
+                    Hi! My name is <span class="purple">Reeya Sharma</span>.
+                    <div>I'm a Computer Science Engineer.</div>
+                    <div>Interested in <span id="element"></span></div>
+                
+                    <div class="button mt-3">
+                        <button class="btn">
+                            <a href="Reeya Sharma Resume.pdf">Download Resume</a>
+                        </button>
+                        <button class="btn">
+                            <a href="https://github.com/Reeya0409">Visit Github</a>
+                        </button>
+                    </div>
+                </div>
+            
+                <div class="col-12 col-md-6 text-center mt-4 mt-md-0">
+                    <img src="./profile.jpeg" class="profileimage">
+                </div>
+            
+            </div>
+        </section>
+        <hr >
+        <!-- **********ABOUT ME********** -->
+        <section class="thirdSection" id="about" >
+            <h1>About Me</h1>
+            <div class="about">
+                I am a Computer Science student with a strong understanding of programming, web technologies, and
+                database concepts. I have worked on practical projects using PHP and MySQL, focusing on both
+                functionality and user interface design. My experience also includes IoT-based projects, and I am
+                actively learning AI/ML technologies. I am motivated to continuously improve my skills, build meaningful
+                applications, and deliver reliable software solutions.
+                <div class="techstack">
+                    <br>
+                    <h3>Tech Stack Overview</h3>
+                    <br>
+                    <div class="tech-container">
+                         <div class="tech-item">HTML</div>
+                         <div class="tech-item">CSS</div>
+                         <div class="tech-item">Java</div>
+                         <div class="tech-item">Python</div>
+                         <div class="tech-item">Machine Learning</div>
+                         <div class="tech-item">C/C++</div>
+                         <div class="tech-item">PHP</div>
+                         <div class="tech-item">Bootstrap</div>
+                         <div class="tech-item">MySQL</div>
+                         <div class="tech-item">Arduino IDE</div>
+                         <div class="tech-item">XAMPP</div>
+                     </div>
+                </div>
+            </div>
+        </section>
+
+        <hr>
+<!-- **********SERVICES********** -->
+        <section class="fourthSection" id ="services">
+            <h1>Services</h1>
+            <div class="services">
+                <div class="services-card">
+                    <svg class="service-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
+                    <path d="M320-240 80-480l240-240 57 57-184 184 183 183-56 56Zm320 0-57-57 184-184-183-183 56-56 240 240-240 240Z"/></svg>
+                    <h3>Frontend Web Development</h3>
+                    <p>Building responsive and modern websites using HTML, CSS and Bootstrap with focus on clean UI and layout design.</p>
+                </div>
+                <div class="services-card">
+                    <svg class="service-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
+                        <path d="M120-360v-240h140q24 0 42 18t18 42v40q0 24-18 42t-42 18h-80v80h-60Zm260 0v-240h60v80h80v-80h60v240h-60v-100h-80v100h-60Zm280 0v-240h140q24 0 42 18t18 42v40q0 24-18 42t-42 18h-80v80h-60ZM180-500h80v-40h-80v40Zm540 0h80v-40h-80v40Z"/></svg>
+                    <h3>Backend & Database Integration</h3>
+                    <p>Developing dynamic web applications using PHP with structured MySQL database integration and backend logic.</p>
+                </div>
+                <div class="services-card">
+                    <svg class="service-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path d="M206-206q-41-48-63.5-107.5T120-440q0-150 105-255t255-105h8l-64-64 56-56 160 160-160 160-57-57 63-63h-6q-116 0-198 82t-82 198q0 51 16.5 96t46.5 81l-57 57Zm234-14q0-23-15.5-45.5t-34.5-47q-19-24.5-34.5-51T340-420q0-58 41-99t99-41q58 0 99 41t41 99q0 30-15.5 56.5t-34.5 51q-19 24.5-34.5 47T520-220h-80Zm0 100v-60h80v60h-80Zm314-86-57-57q30-36 46.5-81t16.5-96q0-66-27.5-122.5T657-657l57-57q58 50 92 120.5T840-440q0 67-22.5 126.5T754-206Z"/></svg>
+                    <h3>Artificial Intelligence / Machine Learning</h3>
+                    <p>Creating intelligent systems using Python and Machine Learning for image recognition and detection tasks.</p>
+                </div>
+                <div class="services-card">
+               <svg class="service-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
+                <path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h560q33 0 56.5 23.5T840-760v560q0 33-23.5 56.5T760-120H200Zm0-507h560v-133H200v133Zm0 214h560v-134H200v134Zm0 213h560v-133H200v133Zm40-454v-80h80v80h-80Zm0 214v-80h80v80h-80Zm0 214v-80h80v80h-80Z"/></svg>
+                    <h3>Database Management</h3>
+                    <p>Designing and managing structured relational databases for efficient data storage and retrieval.</p>
+                </div>
+                <div class="services-card">
+                    <svg class="service-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path d="M480-80q-82 0-155-31.5t-127.5-86Q143-252 111.5-325T80-480q0-83 32.5-156t88-127Q256-817 330-848.5T488-880q80 0 151 27.5t124.5 76q53.5 48.5 85 115T880-518q0 115-70 176.5T640-280h-74q-9 0-12.5 5t-3.5 11q0 12 15 34.5t15 51.5q0 50-27.5 74T480-80Zm0-400Zm-177 23q17-17 17-43t-17-43q-17-17-43-17t-43 17q-17 17-17 43t17 43q17 17 43 17t43-17Zm120-160q17-17 17-43t-17-43q-17-17-43-17t-43 17q-17 17-17 43t17 43q17 17 43 17t43-17Zm200 0q17-17 17-43t-17-43q-17-17-43-17t-43 17q-17 17-17 43t17 43q17 17 43 17t43-17Zm120 160q17-17 17-43t-17-43q-17-17-43-17t-43 17q-17 17-17 43t17 43q17 17 43 17t43-17ZM480-160q9 0 14.5-5t5.5-13q0-14-15-33t-15-57q0-42 29-67t71-25h70q66 0 113-38.5T800-518q0-121-92.5-201.5T488-800q-136 0-232 93t-96 227q0 133 93.5 226.5T480-160Z"/></svg>
+                    <h3>UI & Visual Design</h3>
+                    <p>Designing creative posters, presentations and UI concepts using Canva with strong visual aesthetics.</p>
+                </div>
+                <div class="services-card">
+                    <svg class="service-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path d="M221-240q42 0 71-29t29-71q0-24-11-47t-33-37l-36-24v-252q0-9-5.5-14.5T221-720q-9 0-14.5 5.5T201-700v252l-36 24q-22 15-33 37t-11 47q0 42 29 71t71 29Zm0 80q-75 0-127.5-52T41-340q0-48 22-86t58-62v-212q0-42 29-71t71-29q42 0 71 29t29 71v212q36 24 58 62t22 86q0 75-52.5 127.5T221-160Zm327-200q-48-33-78-85t-30-115q0-100 70-170t170-70q100 0 170 70t70 170q0 63-30 115t-78 85H548Zm28-80h212q27-24 39.5-54t12.5-66q0-66-47-113t-113-47q-66 0-113 47t-47 113q0 36 14.5 66t41.5 54Zm104 280q-24 0-42-18t-18-42h120q0 24-18 42t-42 18Zm-120-80v-80h240v80H560Z"/></svg>
+                    <h3>IoT System Development</h3>
+                    <p>Designing and implementing basic IoT-based systems integrating sensors & microcontrollers for real-world problem solving.</p>
+                </div>
+            </div>
+        </section>
+
+
+        <hr>
+<!-- **********PROJECTS********** -->
+        <section class="fifthSection" id="projects">
+            <h1>Projects</h1>
+            <div class="project">
+                <div class="project-section row">
+                    <div class="project-card col-12 col-md-6">
+                        <h3>Glowhaven-Ecom</h3>
+                        <p><strong>Description :</strong>  A PHP & MySQL based e-commerce website for makeup and beauty products with user authentication, cart, and admin management.</p>
+                        <p><strong>Tech Stack:</strong> HTML, CSS, Bootstrap, PHP, MYSQL</p>
+                        <a href="https://github.com/Reeya0409/Glowhaven-Ecom"><strong>Github Link : </strong>https://github.com/Reeya0409/Glowhaven-Ecom</a>
+                    </div>
+                    <div class="project-image col-12 col-md-6">
+                        <img src="glowhaven.png" alt="">
+                    </div>
+                </div>
+                <div class="project-section row">
+                    <div class="project-image col-12 col-md-6">
+                        <img src="collegemanagement.png" alt="">
+                    </div>
+                    <div class="project-card col-12 col-md-6">
+                        <h3>College Management System</h3>
+                        <p><strong>Description : </strong>A web-based application built with HTML, CSS, Bootstrap, JavaScript, PHP, and MySQL for managing students, faculty, courses, attendance, and results through a secure and user-friendly interface.</p>
+                        <p><strong>Tech Stack : </strong> HTML, CSS, Bootstrap, PHP, MYSQL</p>
+                        <a href="https://github.com/Reeya0409/college-management"><strong>Github Link : </strong>https://github.com/Reeya0409/college-management</a>
+                    </div>
+                </div>
+                <div class="project-section row">
+                    <div class="project-card col-12 col-md-6">
+                        <h3>Smoke Detection System</h3>
+                        <p><strong>Description : </strong>IoT-based smoke detection system using ESP8266 and MQ2 sensor for real time alerts and fire safety</p>
+                        <p><strong>Tech Stack: </strong>C++</p>
+                        <a href="https://github.com/Reeya0409/smoke-alert-system-iot"><strong>Github Link : </strong>https://github.com/Reeya0409/smoke-alert-system-iot</a>
+                     </div>
+                    <div class="project-image col-12 col-md-6">
+                        <img src="blynk.jpeg" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr>
+
+<!-- **********CONTACT ME********** -->
+        <section class="sixthSection" id="contactme">
+            <h1>Contact Me</h1>
+            <div class="contact">
+                <form action="">
+                    <div class="contactform">
+                        <span>Name :</span>
+                        <input type="text" name="Name" id="Name" placeholder="Your Name" required="required">
+                    </div>
+                    <div class="contactform">
+                    <span>Email : </span>
+                    <input type="text" name="Email" id="Email" placeholder="Your Email" required="required">
+                    </div>
+                    <div class="contactform">
+                    <span>Message:</span>
+                    <textarea name="Message" id="Message" placeholder="Enter your Message"
+                        required="required"></textarea>
+                    </div>
+                    <div class="contactbutton">
+                        <input type="submit" value="Contact">
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+    <!-- **********FOOTER********** -->
+    <footer>
+        <div class="footer">
+                <ul>
+                    <li><a href="https://www.linkedin.com/in/reeyaasharma494/">LinkedIn</a></li>
+                    <li><a href="https://github.com/Reeya0409">Github</a></li>
+                    <li><a href="mailto:reeyasharma0904@gmail.com">Email</a></li>
+                    <li><a href="tel:+91 9999999999">Contact</a></li>
+                </ul>
+        </div>
+        <div class="footer-rights">All rights reserved</div>
+    </footer>
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['Web Development.', ' AI/ML'],
+            typeSpeed: 60,
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
